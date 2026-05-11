@@ -1,35 +1,35 @@
 @extends('layouts.app')
 
-@section('title', 'Contact - Pongo Portfolio')
+@section('title', 'Kontak - Eryko Dwi Cahyo')
 
 @section('content')
-<div class="py-8">
-    <h2 class="text-4xl font-bold mb-8 text-center text-rose-400">Hubungi Saya</h2>
-    <div class="grid md:grid-cols-2 gap-8">
-        <div class="glass-card p-6">
-            <h3 class="text-xl font-semibold mb-4 text-rose-300">Informasi Kontak</h3>
-            <div class="space-y-3 text-gray-300">
-                <p>📧 <strong>Email:</strong> pongo@example.com</p>
-                <p>📱 <strong>Telepon:</strong> +62 812 3456 7890</p>
-                <p>🌐 <strong>Instagram:</strong> @pongo.dev</p>
-                <p>💻 <strong>GitHub:</strong> github.com/pongo-dev</p>
+<div class="max-w-3xl mx-auto">
+    <div class="bg-black/30 backdrop-blur-sm rounded-2xl p-8 md:p-10 border border-white/10">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 border-l-4 border-[#d97a3e] pl-4">Hubungi Saya</h2>
+        
+        <p class="text-gray-300 mb-8 leading-relaxed">
+            Tertarik bekerja sama atau ada proyek dokumentasi? Silakan hubungi saya melalui:
+        </p>
+        
+        <div class="space-y-4">
+            <div class="flex items-center gap-4 p-3 rounded-lg bg-white/5">
+                <span class="text-[#d97a3e] font-semibold w-24">Email</span>
+                <span class="text-gray-300">erykodwicahyo@gmail.com</span>
+            </div>
+            <div class="flex items-center gap-4 p-3 rounded-lg bg-white/5">
+                <span class="text-[#d97a3e] font-semibold w-24">Instagram</span>
+                <span class="text-gray-300">@erykodwicahyo</span>
+            </div>
+            <div class="flex items-center gap-4 p-3 rounded-lg bg-white/5">
+                <span class="text-[#d97a3e] font-semibold w-24">YouTube</span>
+                <span class="text-gray-300">/ErykodwiCahyo</span>
             </div>
         </div>
-        <div class="glass-card p-6">
-            <h3 class="text-xl font-semibold mb-4 text-rose-300">Kirim Pesan</h3>
-            <form>
-                <div class="mb-4">
-                    <input type="text" placeholder="Nama lengkap" class="w-full bg-black/50 border border-rose-500/30 rounded-lg px-4 py-2 focus:outline-none focus:border-rose-500 text-white">
-                </div>
-                <div class="mb-4">
-                    <input type="email" placeholder="Email" class="w-full bg-black/50 border border-rose-500/30 rounded-lg px-4 py-2 focus:outline-none focus:border-rose-500 text-white">
-                </div>
-                <div class="mb-4">
-                    <textarea rows="4" placeholder="Pesan..." class="w-full bg-black/50 border border-rose-500/30 rounded-lg px-4 py-2 focus:outline-none focus:border-rose-500 text-white"></textarea>
-                </div>
-                <button type="button" class="btn-rose w-full py-2 rounded-lg font-semibold" onclick="alert('Fitur ini akan segera hadir!')">Kirim Pesan</button>
-            </form>
-            <p class="text-gray-500 text-xs mt-4 text-center">* Form masih demo, data tidak tersimpan.</p>
+        
+        <div class="mt-8 pt-6 border-t border-white/10">
+            <p class="text-gray-400 text-sm text-center">
+                Saya akan merespon dalam 1x24 jam.
+            </p>
         </div>
     </div>
 </div>
