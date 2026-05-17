@@ -165,7 +165,96 @@
             <p class="text-gray-500 text-sm">© 2026 Eryko Dwi Cahyo. Dokumentasi budaya Jawa Timur.</p>
         </div>
     </footer>
+    <!-- ========== AI BOT CHATBOT ========== -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <!-- Tombol Chatbot -->
+        <div id="chatbotBtn" class="w-14 h-14 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 cursor-pointer shadow-lg hover:scale-110 transition flex items-center justify-center text-2xl">
+            🤖
+        </div>
+        
+        <!-- Popup Chat -->
+        <div id="chatbotPopup" class="hidden absolute bottom-20 right-0 w-80 bg-black/80 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl">
+            <div class="flex justify-between items-center p-3 border-b border-white/20">
+                <span class="font-bold text-white">🎬 AI Assistant - Eryko</span>
+                <button id="closeChatbot" class="text-gray-400 hover:text-white">✕</button>
+            </div>
+            <div id="chatMessages" class="h-80 overflow-y-auto p-3 space-y-2 text-sm">
+                <div class="bg-orange-500/20 p-2 rounded-lg">🤖 Halo! Selamat datang di portofolio Eryko Dwi Cahyo. Ada yang ingin kamu tanyakan?</div>
+            </div>
+            <div class="p-3 border-t border-white/20 flex gap-2">
+                <input type="text" id="chatInput" placeholder="Tanya tentang film, yearbook, kontak..." class="flex-1 bg-black/50 border border-white/20 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-orange-500">
+                <button id="sendChat" class="bg-orange-600 px-3 py-2 rounded-lg text-sm hover:bg-orange-700 transition">Kirim</button>
+            </div>
+        </div>
+    </div>
 
+    <script>
+        // Chatbot elements
+        const chatbotBtn = document.getElementById('chatbotBtn');
+        const chatbotPopup = document.getElementById('chatbotPopup');
+        const closeChatbot = document.getElementById('closeChatbot');
+        const sendChat = document.getElementById('sendChat');
+        const chatInput = document.getElementById('chatInput');
+        const chatMessages = document.getElementById('chatMessages');
+
+        // Toggle popup
+        chatbotBtn.onclick = () => chatbotPopup.classList.toggle('hidden');
+        closeChatbot.onclick = () => chatbotPopup.classList.add('hidden');
+
+        function addMessage(text, isUser = false) {
+            const div = document.createElement('div');
+            div.className = isUser ? 'text-right' : '';
+            div.innerHTML = isUser ? `<div class="bg-orange-600/30 p-2 rounded-lg inline-block max-w-[90%] text-right">👤 ${text}</div>` : `<div class="bg-orange-500/20 p-2 rounded-lg inline-block max-w-[90%]">🤖 ${text}</div>`;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Jawaban pintar chatbot
+        function getBotReply(message) {
+            const msg = message.toLowerCase();
+            
+            if (msg.includes('film') || msg.includes('dokumenter')) {
+                return 'Eryko punya 13 film dokumenter budaya Jawa Timur: CANDI DERMO, DOLANAN LAWAS, HARTA LOKAL, JARANAN, KAMPUNG BATIK, KREWENG, PANGGUNG CERITA, Rasa dari Bapak, Hotspot, Last Order, Lontong Balap, Amplop untuk Siti, dan Khong Guan. Klik tab "Karya Film" untuk lihat detailnya! 🎬';
+            }
+            else if (msg.includes('yearbook')) {
+                return 'Yearbook photography tersedia dalam 5 tema: Vintage Classic, Modern Elegant, Cinematic Look, Minimalist, Urban Style. Klik tab "Fotografi Yearbook" ya! 📸';
+            }
+            else if (msg.includes('content creator') || msg.includes('akun') || msg.includes('sosmed')) {
+                return 'Eryko memiliki akun di Instagram (@eryko_documentary, @eryko_portfolio) dan TikTok (@eryko_film, @eryko_studio). Total 6 akun dengan berbagai jenis konten dokumenter dan branding. 📱';
+            }
+            else if (msg.includes('kontak') || msg.includes('email') || msg.includes('ig') || msg.includes('instagram')) {
+                return '📧 Email: erykodwicahyo@gmail.com\n📷 Instagram: @erykodwicahyo\n▶️ YouTube: /ErykodwiCahyo\n💼 LinkedIn: Eryko Dwi Cahyo';
+            }
+            else if (msg.includes('prestasi') || msg.includes('sertifikat') || msg.includes('juara')) {
+                return '🏆 Prestasi Eryko:\n1. Juara 2 Film Nasional - Banyuwangi Film Festival\n2. Magang PT Suryasukses Group\n3. Sertifikat Magang Skak Studio\n4. Sertifikat Lulus Magang SeStudio\nTotal 4 sertifikat! Cek tab "Pencapaian" untuk detail.';
+            }
+            else if (msg.includes('makasih') || msg.includes('terima kasih')) {
+                return 'Sama-sama! Senang bisa membantu. Semangat terus berkarya! 🔥🎬';
+            }
+            else if (msg.includes('halo') || msg.includes('hai')) {
+                return 'Halo juga! Selamat datang di portofolio Eryko. Ada yang bisa saya bantu? 👋';
+            }
+            else {
+                return 'Maaf, saya belum mengerti. Coba tanya tentang:\n- Film dokumenter\n- Yearbook photography\n- Content creator\n- Kontak\n- Prestasi & sertifikat';
+            }
+        }
+
+        sendChat.onclick = () => {
+            const msg = chatInput.value.trim();
+            if (!msg) return;
+            addMessage(msg, true);
+            chatInput.value = '';
+
+            setTimeout(() => {
+                const reply = getBotReply(msg);
+                addMessage(reply);
+            }, 500);
+        };
+        
+        chatInput.onkeypress = (e) => {
+            if (e.key === 'Enter') sendChat.onclick();
+        };
+    </script>
     @stack('scripts')
 </body>
 </html>

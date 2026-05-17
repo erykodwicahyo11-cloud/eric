@@ -231,23 +231,19 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
                 @php
-                $yearbookThemes = [
-                    ['id' => 1, 'title' => 'Vintage Classic', 'desc' => 'Nuansa hitam putih dengan kesan klasik', 'cover' => 'photo1.jpg'],
-                    ['id' => 2, 'title' => 'Modern Elegant', 'desc' => 'Gaya modern dengan pencahayaan dramatis', 'cover' => 'photo2.jpg'],
-                    ['id' => 3, 'title' => 'Cinematic Look', 'desc' => 'Bergaya sinematik dengan tone warm', 'cover' => 'photo3.jpg'],
-                    ['id' => 4, 'title' => 'Minimalist', 'desc' => 'Simple dan clean dengan latar solid', 'cover' => 'photo4.jpg'],
-                    ['id' => 5, 'title' => 'Urban Style', 'desc' => 'Kesan muda dengan latar perkotaan', 'cover' => 'photo5.jpg'],
-                ];
+$yearbookThemes = [
+    ['id' => 1, 'title' => 'Old Money', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'old-money-cover.jpg'],
+    ['id' => 2, 'title' => 'jungle adventure', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'streetwear-cover.jpg'],
+    ['id' => 3, 'title' => 'StreetWear', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'cinematic-cover.jpg'],
+    ['id' => 4, 'title' => 'harry potter', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'minimalist-cover.jpg'],
+    ['id' => 5, 'title' => 'Urban Style', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'urban-cover.jpg'],
+];
                 @endphp
                 @foreach($yearbookThemes as $theme)
                 <div class="yearbook-card" onclick="openYearbookModal({{ $theme['id'] }}, '{{ $theme['title'] }}', '{{ $theme['desc'] }}')">
-                    <div class="placeholder-img" style="aspect-ratio: 1/1; min-height: auto;">
-                        <div class="text-center">
-                            <div class="text-3xl mb-2">📸</div>
-                            <p class="text-sm">{{ $theme['title'] }}</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-xs mt-2">{{ $theme['desc'] }}</p>
+                    <img src="{{ asset('images/yearbook/covers/' . $theme['cover']) }}" alt="{{ $theme['title'] }}" class="w-full h-48 object-cover rounded-lg mb-3" onerror="this.src='https://placehold.co/400x400/333/666?text=No+Image'">
+                    <h3 class="text-white font-semibold text-sm mt-2">{{ $theme['title'] }}</h3>
+                    <p class="text-gray-400 text-xs mt-1">{{ $theme['desc'] }}</p>
                 </div>
                 @endforeach
             </div>
@@ -305,31 +301,33 @@
                 <h2 class="text-2xl font-bold text-white mb-2">Pencapaian & Sertifikat</h2>
                 <p class="text-gray-400">Penghargaan dan pengakuan atas karya</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Sertifikat 1 -->
                 <div class="cert-card p-6 text-center">
-                    <div class="text-5xl mb-4">🏆</div>
+                    <img src="{{ asset('images/certificates/juara2.jpg') }}" alt="Juara 2" class="w-full h-32 object-cover rounded-lg mb-3">
                     <h3 class="text-xl font-semibold text-white mb-2">Juara 2 Film Nasional</h3>
                     <p class="text-gray-400 text-sm">Banyuwangi Film Festival</p>
-                    <p class="text-orange-400 text-xs mt-2">Upload sertifikat ke folder public/images/certificates/juara2.jpg</p>
                 </div>
+                <!-- Sertifikat 2 -->
                 <div class="cert-card p-6 text-center">
-                    <div class="text-5xl mb-4">📄</div>
+                    <img src="{{ asset('images/certificates/magang-skak-studio.jpg') }}" alt="Magang Skak Studio" class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h3 class="text-xl font-semibold text-white mb-2">Magang Skak Studio</h3>
+                    <p class="text-gray-400 text-sm">Sertifikat magang produksi film serial loro ati season 2</p>
+                </div>
+                <!-- Sertifikat 3 -->
+                <div class="cert-card p-6 text-center">
+                    <img src="{{ asset('images/certificates/magang-sestudio.jpg') }}" alt="Magang SeStudio" class="w-full h-32 object-cover rounded-lg mb-3">
+                    <h3 class="text-xl font-semibold text-white mb-2">Lulus Magang SeStudio</h3>
+                    <p class="text-gray-400 text-sm">Sertifikat kelulusan magang membuat 7 film dokumenter</p>
+                </div>
+                <!-- Sertifikat 4 -->
+                <div class="cert-card p-6 text-center">
+                    <img src="{{ asset('images/certificates/magang-sap.jpg') }}" alt="Magang SAP" class="w-full h-32 object-cover rounded-lg mb-3">
                     <h3 class="text-xl font-semibold text-white mb-2">Magang PT Suryasukses Group</h3>
-                    <p class="text-gray-400 text-sm">Sertifikat magang / internship</p>
-                    <p class="text-orange-400 text-xs mt-2">Upload sertifikat ke folder public/images/certificates/magang.jpg</p>
-                </div>
-                <div class="cert-card p-6 text-center">
-                    <div class="text-5xl mb-4">✨</div>
-                    <h3 class="text-xl font-semibold text-white mb-2">Penghargaan Lainnya</h3>
-                    <p class="text-gray-400 text-sm">Tempatkan sertifikat atau piagam di sini</p>
-                    <p class="text-orange-400 text-xs mt-2">Upload file ke folder public/images/certificates/cert3.jpg</p>
+                    <p class="text-gray-400 text-sm">Sertifikat magang sebagai digital marketing</p>
                 </div>
             </div>
         </div>
-
-    </div>
-</div>
-
 <!-- ==================== MODAL POPUP ==================== -->
 <div id="modal" class="modal">
     <div class="modal-content">
@@ -357,60 +355,57 @@
     }
 
     // Yearbook Modal - Menampilkan galeri foto berdasarkan tema
-    function openYearbookModal(id, title, desc) {
-        const modalBody = document.getElementById('modal-body');
-        
-        // Contoh galeri foto per tema (lo ganti dengan file foto asli lo)
-        const galleryPhotos = {
-            1: ['photo1_1.jpg', 'photo1_2.jpg', 'photo1_3.jpg'],
-            2: ['photo2_1.jpg', 'photo2_2.jpg', 'photo2_3.jpg'],
-            3: ['photo3_1.jpg', 'photo3_2.jpg', 'photo3_3.jpg'],
-            4: ['photo4_1.jpg', 'photo4_2.jpg', 'photo4_3.jpg'],
-            5: ['photo5_1.jpg', 'photo5_2.jpg', 'photo5_3.jpg'],
-        };
-        
-        const photos = galleryPhotos[id] || ['placeholder.jpg'];
-        
-        let carouselHtml = `<div class="swiper yearbookSwiper" style="width:100%">
-            <div class="swiper-wrapper">`;
-        
-        photos.forEach(photo => {
-            carouselHtml += `<div class="swiper-slide">
-                <div class="placeholder-img" style="min-height: 400px;">
-                    <div class="text-center">
-                        <div class="text-5xl mb-3">🖼️</div>
-                        <p>Foto: ${photo}</p>
-                        <p class="text-xs mt-2">Upload ke folder public/images/yearbook/gallery/${photo}</p>
-                    </div>
-                </div>
-            </div>`;
-        });
-        
-        carouselHtml += `</div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>`;
-        
-        modalBody.innerHTML = `
-            <h2 class="text-2xl font-bold text-white mb-2">${title}</h2>
-            <p class="text-gray-400 mb-4">${desc}</p>
-            ${carouselHtml}
-            <p class="text-gray-500 text-xs text-center mt-4">*Masukkan file foto ke folder public/images/yearbook/gallery/</p>
-        `;
-        
-        document.getElementById('modal').classList.add('active');
-        
-        setTimeout(() => {
-            new Swiper('.yearbookSwiper', {
-                slidesPerView: 1,
-                spaceBetween: 30,
-                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
-                pagination: { el: '.swiper-pagination', clickable: true },
-                loop: true
-            });
-        }, 100);
+   function openYearbookModal(id, title, desc) {
+    const modalBody = document.getElementById('modal-body');
+    
+    // Daftar file foto untuk setiap tema
+    let photos = [];
+    let folderName = '';
+    
+    if (id === 1) { // Old Money
+        folderName = 'old money';
+        photos = ['AFZ01015.jpg', 'AFZ01855.jpg', 'IVN07905.jpg', 'IVN08275.jpg'];
+    } else if (id === 2) { // jungle adventure
+        folderName = 'jungle adventure';
+        photos = ['AFZ08784.jpg', 'AFZ08820.jpg', 'AFZ09143.jpg', 'AFZ09158.jpg'];
+    } else {
+        folderName = 'theme' + id;
+        photos = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg'];
     }
+    
+    let carouselHtml = `<div class="swiper yearbookSwiper" style="width:100%">
+        <div class="swiper-wrapper">`;
+    
+    photos.forEach(photo => {
+        carouselHtml += `<div class="swiper-slide">
+            <img src="/images/yearbook/gallery/${folderName}/${photo}" alt="Foto" class="w-full h-auto rounded-lg" onerror="this.src='https://placehold.co/600x400/333/666?text=Foto+Belum+Ada'">
+        </div>`;
+    });
+    
+    carouselHtml += `</div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>`;
+    
+    modalBody.innerHTML = `
+        <h2 class="text-2xl font-bold text-white mb-2">${title}</h2>
+        <p class="text-gray-400 mb-4">${desc}</p>
+        ${carouselHtml}
+    `;
+    
+    document.getElementById('modal').classList.add('active');
+    
+    setTimeout(() => {
+        new Swiper('.yearbookSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            loop: true
+        });
+    }, 100);
+}
 
     // Content Creator Modal - Menampilkan detail akun
     function openContentModal(id, name, platform, desc, followers, contentType) {
