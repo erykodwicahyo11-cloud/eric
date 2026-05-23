@@ -249,38 +249,86 @@ $yearbookThemes = [
             </div>
         </div>
 
-        <!-- ==================== TAB 3: CONTENT CREATOR ==================== -->
+         <!-- ==================== TAB 3: CONTENT CREATOR ==================== -->
         <div id="tab-content" class="tab-content" style="display: none;">
             <div class="text-center mb-8">
-                <h2 class="text-2xl font-bold text-white mb-2">Content Creator</h2>
-                <p class="text-gray-400">Klik akun untuk melihat detail dan portofolio konten</p>
+                <h2 class="text-2xl font-bold text-white mb-2">Social Media Branding</h2>
+                <p class="text-gray-400">Klik brand untuk melihat detail dan portofolio konten</p>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 @php
                 $contentAccounts = [
-                    ['id' => 1, 'name' => '@eryko_documentary', 'platform' => 'Instagram', 'desc' => 'Dokumentasi budaya dan film pendek', 'followers' => '2.5K', 'content_type' => 'Dokumenter, Behind The Scene'],
-                    ['id' => 2, 'name' => '@eryko_film', 'platform' => 'TikTok', 'desc' => 'Behind the scene dan teaser film', 'followers' => '5.8K', 'content_type' => 'Teaser, BTS, Review Film'],
-                    ['id' => 3, 'name' => '@eryko_portfolio', 'platform' => 'Instagram', 'desc' => 'Portofolio fotografi & yearbook', 'followers' => '1.2K', 'content_type' => 'Yearbook, Portrait, Commercial'],
-                    ['id' => 4, 'name' => '@eryko_creative', 'platform' => 'YouTube', 'desc' => 'Konten kreatif dan tutorial', 'followers' => '3.1K', 'content_type' => 'Tutorial, Vlog, Review'],
-                    ['id' => 5, 'name' => '@eryko_bts', 'platform' => 'Instagram', 'desc' => 'Behind the scene produksi film', 'followers' => '980', 'content_type' => 'BTS, Production Journey'],
-                    ['id' => 6, 'name' => '@eryko_studio', 'platform' => 'TikTok', 'desc' => 'Studio production and editing', 'followers' => '2.2K', 'content_type' => 'Editing, Studio Life, Tips'],
+                    [
+                        'id' => 1,
+                        'name' => 'trustmed.id',
+                        'platform' => 'Instagram & TikTok',
+                        'desc' => 'Brand masker medis premium dengan izin KEMENKES.',
+                        'followers' => '660 (IG) | 441 (TT)',
+                        'content_type' => 'Edukasi masker, foto produk, branding',
+                        'cover' => 'trustmed.jpg'
+                    ],
+                    [
+                        'id' => 2,
+                        'name' => 'multindoplastic',
+                        'platform' => 'Instagram & TikTok',
+                        'desc' => 'Plastic supplies since 1989. Distributor perlengkapan rumah tangga.',
+                        'followers' => '4.4K (IG) | 7.4K (TT)',
+                        'content_type' => 'Katalog produk, edukasi bisnis plastik',
+                        'cover' => 'multindo.jpg'
+                    ],
+                    [
+                        'id' => 3,
+                        'name' => 'botolplastik_sap',
+                        'platform' => 'Instagram & TikTok',
+                        'desc' => 'Supplier botol, cup plastik, preform, dan tutup gelas.',
+                        'followers' => '1.1K (IG) | 5.3K (TT)',
+                        'content_type' => 'Ide minuman, showcase produk, edukasi',
+                        'cover' => 'botolplastik.jpg'
+                    ],
+                    [
+                        'id' => 4,
+                        'name' => 'amariroof',
+                        'platform' => 'Instagram & TikTok',
+                        'desc' => 'Amani UPVC Roof, solusi atap untuk semua bangunan.',
+                        'followers' => '835 (IG) | 12.3K (TT)',
+                        'content_type' => 'Perbandingan atap, edukasi produk, testimoni',
+                        'cover' => 'amariroof.jpg'
+                    ],
+                    [
+                        'id' => 5,
+                        'name' => 'amarispunbond',
+                        'platform' => 'Instagram',
+                        'desc' => 'Amani Spunbond, bahan baku masker dan medis.',
+                        'followers' => '604 (IG)',
+                        'content_type' => 'Foto produk, spesifikasi bahan',
+                        'cover' => 'amarispunbond.jpg'
+                    ],
+                    [
+                        'id' => 6,
+                        'name' => 'suryasuksesgroup',
+                        'platform' => 'Instagram',
+                        'desc' => 'Perusahaan manufaktur plastik terkemuka di Surabaya.',
+                        'followers' => '1.4K (IG)',
+                        'content_type' => 'Konten perusahaan, profil produk',
+                        'cover' => 'suryasukses.jpg'
+                    ],
                 ];
                 @endphp
                 @foreach($contentAccounts as $account)
-                <div class="content-card" onclick="openContentModal({{ $account['id'] }}, '{{ $account['name'] }}', '{{ $account['platform'] }}', '{{ $account['desc'] }}', '{{ $account['followers'] }}', '{{ $account['content_type'] }}')">
-                    <div class="placeholder-img" style="aspect-ratio: 1/1; min-height: auto;">
-                        <div class="text-center">
-                            <div class="text-3xl mb-2">📱</div>
-                            <p class="text-sm font-semibold">{{ $account['name'] }}</p>
-                            <p class="text-xs text-orange-400">{{ $account['platform'] }}</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-xs mt-2">{{ $account['desc'] }}</p>
-                </div>
+<div class="content-card cursor-pointer" onclick="openContentModal({{ $account['id'] }}, '{{ $account['name'] }}', '{{ $account['platform'] }}', '{{ $account['desc'] }}', '{{ $account['followers'] }}', '{{ $account['content_type'] }}')">
+    <img src="{{ asset('images/content/' . $account['cover']) }}" 
+         alt="{{ $account['name'] }}" 
+         class="w-full h-40 object-cover rounded-t-lg" 
+         onerror="this.src='https://placehold.co/400x300/333/666?text=No+Image'">
+    <div class="p-3">
+        <h3 class="text-white font-semibold text-sm">{{ $account['name'] }}</h3>
+        <p class="text-orange-400 text-xs">{{ $account['platform'] }}</p>
+        <p class="text-gray-400 text-xs mt-1 line-clamp-2">{{ $account['desc'] }}</p>
+    </div>
+</div>
                 @endforeach
             </div>
         </div>
-
         <!-- ==================== TAB 4: KOMERSIL ==================== -->
         <div id="tab-commercial" class="tab-content" style="display: none;">
             <div class="flex flex-col md:flex-row gap-8 items-start">
@@ -408,38 +456,66 @@ $yearbookThemes = [
 }
 
     // Content Creator Modal - Menampilkan detail akun
-    function openContentModal(id, name, platform, desc, followers, contentType) {
-        const modalBody = document.getElementById('modal-body');
-        
-        modalBody.innerHTML = `
-            <div class="text-center">
-                <div class="text-6xl mb-4">📱</div>
-                <h2 class="text-2xl font-bold text-white mb-2">${name}</h2>
-                <p class="text-orange-400 mb-4">${platform}</p>
-                <div class="grid grid-cols-2 gap-4 mb-6">
-                    <div class="bg-black/30 p-3 rounded-lg">
-                        <p class="text-gray-400 text-sm">Followers</p>
-                        <p class="text-white text-xl font-bold">${followers}</p>
-                    </div>
-                    <div class="bg-black/30 p-3 rounded-lg">
-                        <p class="text-gray-400 text-sm">Jenis Konten</p>
-                        <p class="text-white text-sm font-semibold">${contentType}</p>
-                    </div>
-                </div>
-                <p class="text-gray-300 mb-4">${desc}</p>
-                <div class="placeholder-img p-4 mb-3">
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">📸</div>
-                        <p>Sampel Konten</p>
-                        <p class="text-xs">Upload screenshot ke folder public/images/content/${name}.jpg</p>
-                    </div>
-                </div>
-                <button onclick="closeModal()" class="btn-watch mt-2">Tutup</button>
+function openContentModal(id, name, platform, desc, followers, contentType) {
+    const modalBody = document.getElementById('modal-body');
+    
+    // Mapping file thumbnail TikTok
+    let tiktokThumb = '';
+    let tiktokUrl = '';
+    
+    if (name === 'amariroof') {
+        tiktokThumb = 'amariroof-tiktok1.jpg';
+        tiktokUrl = 'https://www.tiktok.com/@amariroof/video/7441099723';
+    } else if (name === 'botolplastik_sap') {
+        tiktokThumb = 'botolplastik-tiktok1.jpg';
+        tiktokUrl = 'https://www.tiktok.com/@botolplastik_sap/video/7393272807678938373';
+    } else if (name === 'multindoplastic') {
+        tiktokThumb = 'multindo-tiktok1.jpg';
+        tiktokUrl = 'https://www.tiktok.com/@multindoplastic/video/7303829583869070598';
+    } else if (name === 'trustmed.id') {
+        tiktokThumb = 'trustmed-tiktok1.jpg';
+        tiktokUrl = 'https://www.tiktok.com/@trustmed.id/video/74437491';
+    }
+    
+    let tiktokHtml = '';
+    if (tiktokThumb) {
+        tiktokHtml = `
+            <div class="mt-4 pt-3 border-t border-gray-700">
+                <p class="text-gray-400 text-sm mb-2">🎬 Contoh Konten TikTok:</p>
+                <a href="${tiktokUrl}" target="_blank" class="block">
+                    <img src="/images/content/${tiktokThumb}" class="rounded-lg w-full hover:opacity-80 transition" onerror="this.src='https://placehold.co/600x800/333/666?text=Thumbnail+TikTok'">
+                </a>
+                <p class="text-gray-500 text-xs mt-2 text-center"> Click to watch on TikTok</p>
             </div>
         `;
-        
-        document.getElementById('modal').classList.add('active');
     }
+    
+    modalBody.innerHTML = `
+        <div class="p-2">
+            <h2 class="text-xl md:text-2xl font-bold text-white text-center mb-1">${name}</h2>
+            <p class="text-center text-orange-400 text-sm mb-4">${platform}</p>
+            
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <div class="bg-black/40 p-2 rounded-lg text-center">
+                    <p class="text-gray-400 text-xs">Followers</p>
+                    <p class="text-white text-sm font-bold">${followers}</p>
+                </div>
+                <div class="bg-black/40 p-2 rounded-lg text-center">
+                    <p class="text-gray-400 text-xs">Jenis Konten</p>
+                    <p class="text-white text-sm">${contentType}</p>
+                </div>
+            </div>
+            
+            <p class="text-gray-300 text-sm mb-4 leading-relaxed text-center">${desc}</p>
+            
+            ${tiktokHtml}
+            
+            <button onclick="closeModal()" class="btn-watch w-full mt-4 text-center justify-center">Tutup</button>
+        </div>
+    `;
+    
+    document.getElementById('modal').classList.add('active');
+}
 
     // Tutup modal jika klik di luar modal
     window.onclick = function(event) {
