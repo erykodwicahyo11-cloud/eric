@@ -272,6 +272,32 @@
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
+    // Pembuatan Soft Contact Shadow di Bawah Kaki Karakter
+    const shadowCanvas = document.createElement('canvas');
+    shadowCanvas.width = 128;
+    shadowCanvas.height = 128;
+    const shadowCtx = shadowCanvas.getContext('2d');
+    
+    // Gradient lingkaran hitam transparan ke transparan penuh
+    const shadowGradient = shadowCtx.createRadialGradient(64, 64, 0, 64, 64, 64);
+    shadowGradient.addColorStop(0, 'rgba(0, 0, 0, 0.6)');
+    shadowGradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    shadowCtx.fillStyle = shadowGradient;
+    shadowCtx.fillRect(0, 0, 128, 128);
+
+    const shadowTexture = new THREE.CanvasTexture(shadowCanvas);
+    const shadowGeo = new THREE.PlaneGeometry(1.6, 1.6);
+    const shadowMat = new THREE.MeshBasicMaterial({
+        map: shadowTexture,
+        transparent: true,
+        depthWrite: false
+    });
+    
+    const shadowMesh = new THREE.Mesh(shadowGeo, shadowMat);
+    shadowMesh.rotation.x = -Math.PI / 2; // Buat horizontal sejajar lantai
+    shadowMesh.position.set(0, -0.99, 0); // Kaki karakter berada di y = -1.0
+    scene.add(shadowMesh);
+
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
     scene.add(ambientLight);
