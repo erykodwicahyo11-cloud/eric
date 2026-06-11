@@ -265,7 +265,7 @@ $yearbookThemes = [
     ['id' => 2, 'title' => 'jungle adventure', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'streetwear-cover.jpg'],
     ['id' => 3, 'title' => 'StreetWear', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'cinematic-cover.jpg'],
     ['id' => 4, 'title' => 'harry potter', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'minimalist-cover.jpg'],
-    ['id' => 5, 'title' => 'Urban Style', 'desc' => 'foto buku kelulusan smk barunawati jurusan', 'cover' => 'urban-cover.jpg'],
+    ['id' => 5, 'title' => 'Mahardika Chase', 'desc' => 'Dokumentasi acara Management Chase 2025 - Surabaya', 'cover' => 'mahardika-chase.jpg'],
 ];
                 @endphp
                 @foreach($yearbookThemes as $theme)
@@ -445,8 +445,11 @@ $yearbookThemes = [
     } else if (id === 2) { // jungle adventure
         folderName = 'jungle adventure';
         photos = ['AFZ08784.jpg', 'AFZ08820.jpg', 'AFZ09143.jpg', 'AFZ09158.jpg'];
+    } else if (id === 5) { // Mahardika Chase
+        folderName = 'mahardika-chase';
+        photos = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg', 'photo4.jpg'];
     } else {
-        folderName = 'theme' + id;
+        folderName = 'mahardika-chase' + id;
         photos = ['photo1.jpg', 'photo2.jpg', 'photo3.jpg'];
     }
     
