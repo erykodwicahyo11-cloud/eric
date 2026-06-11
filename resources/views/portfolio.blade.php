@@ -192,21 +192,50 @@
         <!-- ==================== TAB 1: KARYA FILM ==================== -->
         <div id="tab-film" class="tab-content active-tab">
             @php
-            $films = [
-                ['title' => 'CANDI DERMO', 'poster' => 'candi-dermo.jpg', 'link' => 'https://youtu.be/i1q3rRqoeoM', 'sinopsis' => 'Candi Dermo merupakan salah satu pintu suci untuk masuk ke dalam kawasan Majapahit. Diceritakan pula Candi Dermo menjadi tempat persembunyian ketika terjadi perang di Majapahit.'],
-                ['title' => 'DOLANAN LAWAS', 'poster' => 'dolanan-lawas.jpg', 'link' => 'https://youtu.be/phGuAx0ciPw', 'sinopsis' => 'Permainan tradisional adalah warisan dari nenek moyang yang harus kita lestarikan karena mengandung kearifan lokal Indonesia, khususnya di Jawa Timur.'],
-                ['title' => 'HARTA LOKAL', 'poster' => 'harta-lokal.jpg', 'link' => 'https://youtu.be/p82Z715noUI', 'sinopsis' => 'Pecel Semanggi adalah salah satu makanan ciri khas daerah Jawa Timur khususnya Surabaya. Bahan utama pecel ini adalah daun semanggi.'],
-                ['title' => 'JARANAN', 'poster' => 'jaranan.jpg', 'link' => 'https://youtu.be/xXm-IopZHeA', 'sinopsis' => 'Jaranan adalah kesenian tradisional yang berasal dari Kediri. Pimpinan Putro Warso Wijoyo berjuang melestarikan kesenian tradisional ini.'],
-                ['title' => 'KAMPUNG BATIK', 'poster' => 'kampung-batik.jpg', 'link' => 'https://youtu.be/Fw-yTkQKBHQ', 'sinopsis' => 'Batik tulis atau batik tradisional merupakan jenis batik yang proses pembuatannya dilakukan secara manual menggunakan tangan.'],
-                ['title' => 'KREWENG', 'poster' => 'kreweng.jpg', 'link' => 'https://youtu.be/CEyZ-Ba0iPM', 'sinopsis' => 'Museum Kreweng sangatlah sederhana. Museum ini berbeda dari museum pada umumnya karena masih beratapkan langit dan beralaskan tanah.'],
-                ['title' => 'PANGGUNG CERITA', 'poster' => 'panggung-cerita.jpg', 'link' => 'https://youtu.be/U9FqxkllgV0', 'sinopsis' => 'Ludruk bersifat menghibur dan membuat penontonnya tertawa, menggunakan bahasa khas Surabaya.'],
-                ['title' => 'Rasa dari Bapak', 'poster' => 'rasa-bapak.jpg', 'link' => 'https://youtu.be/ou55DtxFpco', 'sinopsis' => 'Sebuah kisah tentang hubungan antara seorang bapak dan anaknya yang penuh makna dan rasa.'],
-                ['title' => 'Hotspot', 'poster' => 'hotspot.jpg', 'link' => 'https://youtu.be/Wi_LYMpDgnI', 'sinopsis' => 'Kisah anak muda yang terjebak dalam gengsi di era digital.'],
-                ['title' => 'Last Order', 'poster' => 'last-order.jpg', 'link' => 'https://youtu.be/3r3wemD_RNM', 'sinopsis' => 'Momen-momen terakhir di sebuah kedai kopi yang menyimpan banyak cerita.'],
-                ['title' => 'Lontong Balap', 'poster' => 'lontong-balap.jpg', 'link' => 'https://youtu.be/orFGpNMOLJg', 'sinopsis' => 'Siti ingin mengajak Roy makan Lontong Balap setelah ngampus. Namun Siti harus menjelaskan tentang Lontong Balap.'],
-                ['title' => 'Amplop untuk Siti', 'poster' => 'amplop-siti.jpg', 'link' => 'https://youtu.be/WCgd1Ve7aFI', 'sinopsis' => 'Sebuah kisah sederhana tentang ketulusan dan kejutan kecil untuk seseorang.'],
-                ['title' => 'Khong Guan', 'poster' => 'khong-guan.jpg', 'link' => 'https://youtu.be/I6HaJiuaTss', 'sinopsis' => 'Iklan komersial untuk Khong Guan: Serial Ramadhan - Rumah Ep. 4 Damai.'],
-            ];
+$films = [
+    [
+        'title' => 'CANDI DERMO — Gaffer',
+        'poster' => 'candi-dermo.jpg',
+        'link' => 'https://youtu.be/i1q3rRqoeoM',
+        'sinopsis' => 'Dalam produksi film dokumenter pendek "Candi Dermo", saya berperan sebagai Gaffer — bertanggung jawab penuh atas tata cahaya di lokasi syuting exterior situs cagar budaya Majapahit, Sidoarjo. Bekerja di bawah cahaya matahari pagi yang dinamis, saya mengoperasikan reflector silver dan gold untuk memantulkan cahaya ke arah narasumber, diffuser dan scrim untuk melembutkan intensitas cahaya keras agar kulit dan tekstur batu candi terbaca dengan natural di kamera, serta black flag sebagai negative fill untuk mengontrol bayangan berlebih di satu sisi frame. Seluruh setup ditopang menggunakan C-stand dan light stand yang diposisikan secara strategis tanpa mengganggu kesakralan lokasi. Hasilnya adalah visual dokumenter yang terasa jujur, hangat, dan sinematik sesuai dengan semangat film yang ingin menghidupkan kembali warisan Majapahit lewat gambar.'
+    ],
+    [
+        'title' => 'DOLANAN LAWAS — Sutradara',
+        'poster' => 'dolanan-lawas.jpg',
+        'link' => 'https://youtu.be/phGuAx0ciPw',
+        'sinopsis' => 'Dalam film dokumenter pendek "Dolanan Lawas", saya berperan sebagai Sutradara yang memimpin penuh jalannya produksi. Film ini saya garap di Kampung Lali Gadget, sebuah perkampungan unik di mana anak-anak diajak melupakan gawai dan kembali bermain dengan alam dan permainan tradisional. Melalui pendekatan observasional, saya mengarahkan tim untuk merekam momen bermain anak-anak secara natural, sekaligus menggali sudut pandang orang tua pengunjung dan penggagas kampung tentang keresahan mereka terhadap ketergantungan anak pada teknologi. Sebagai sutradara, saya percaya bahwa tugas saya bukan hanya memimpin kamera, tapi memastikan setiap wawancara dan setiap tawa anak di lumpur sawah itu bercerita dengan sendirinya tanpa perlu dipaksa.'
+    ],
+    [
+        'title' => 'HARTA LOKAL — Gaffer',
+        'poster' => 'harta-lokal.jpg',
+        'link' => 'https://youtu.be/p82Z715noUI',
+        'sinopsis' => 'Dalam produksi film dokumenter pendek "Harta Lokal", saya berperan sebagai Gaffer yang mengelola dua pendekatan pencahayaan berbeda dalam satu produksi. Demi mengabadikan momen panen daun semanggi yang hanya terjadi dini hari, saya dan tim menginap di rumah Pak RT dan bersiap sejak pukul 03.00 subuh. Untuk sesi panen di hamparan sawah Kampung Semanggi, Benowo, saya memilih membiarkan cahaya alami blue hour bekerja sepenuhnya, membaca arah dan intensitasnya agar footage tetap terasa hangat dan autentik. Sementara untuk sesi wawancara narasumber, saya beralih ke setup formal menggunakan light stand dan lampu Godox untuk menghadirkan pencahayaan yang bersih, merata, dan konsisten. Kemampuan berpindah antara dua pendekatan ini, dari cahaya alami hingga setup formal, menjadi pengalaman yang membentuk kepekaan saya sebagai seorang Gaffer.'
+    ],
+    [
+        'title' => 'PANGGUNG CERITA — Cameraman',
+        'poster' => 'panggung-cerita.jpg',
+        'link' => 'https://youtu.be/U9FqxkllgV0',
+        'sinopsis' => 'Dalam produksi film dokumenter pendek "Ludruk Jawa Timur", saya berperan sebagai Cameraman dengan sistem pengambilan gambar multicam bersama dua kamera lainnya, termasuk sutradara yang turut merekam langsung di lapangan. Dengan posisi kamera di sisi kiri panggung, saya bergerak dinamis mengelilingi area pertunjukan Ludruk Sarip Tambak Oso untuk menangkap berbagai sudut, mulai dari ekspresi pemain di atas panggung, detail kostum dan properti, hingga reaksi penonton yang menjadi bagian tak terpisahkan dari pertunjukan itu sendiri. Produksi malam hari dengan formasi minimalis ini menuntut kepekaan tinggi terhadap momen: tanpa komunikasi intens antar kamera karena jarak yang berjauhan, setiap cameraman harus mandiri membaca situasi dan baru berkoordinasi saat ada briefing baru. Justru dari keterbatasan itulah saya belajar membaca panggung dengan insting, bukan instruksi.'
+    ],
+    [
+        'title' => 'KREWENG — Editor & Riset',
+        'poster' => 'kreweng.jpg',
+        'link' => 'https://youtu.be/CEyZ-Ba0iPM',
+        'sinopsis' => 'Dalam produksi film dokumenter pendek "Kreweng", saya berperan sebagai Editor sekaligus terlibat langsung dalam tahap riset lapangan bersama sutradara, Muhammad Farhan Magribi. Kami berdua mendatangi Museum Kreweng di Desa Terungwetan, Krian, Sidoarjo — sebuah museum sederhana beratapkan langit dan beralaskan tanah yang menyimpan ratusan pecahan ornamen peninggalan Kadipaten Terung dari masa Kerajaan Majapahit abad ke-14. Di sana, kami bertemu langsung dengan penjaga museum dan mengobrol santai bersama beliau, menggali cerita, sejarah, dan makna di balik setiap benda yang tersimpan di sana. Keterlibatan saya sejak fase riset membuat proses editing menjadi jauh lebih dalam, saya tidak hanya menyusun gambar, tapi menyusun cerita yang sudah saya rasakan sendiri di lokasi.'
+    ],
+    [
+        'title' => 'JARANAN — Editor',
+        'poster' => 'jaranan.jpg',
+        'link' => 'https://youtu.be/xXm-IopZHeA',
+        'sinopsis' => 'Dalam produksi film dokumenter pendek "Jaranan", saya berperan sebagai Editor yang bertanggung jawab menyusun seluruh materi footage menjadi sebuah film yang utuh dan berkesan. Tantangan terbesar dalam proses editing film ini adalah noise audio yang cukup mengganggu pada sesi wawancara, kondisi yang tak terhindarkan mengingat lokasi syuting berada di lingkungan sanggar dengan aktivitas gamelan dan latihan tari yang berlangsung bersamaan. Saya harus cermat dalam memilah, menyusun, dan meminimalisir dampak noise tersebut tanpa mengorbankan keaslian suasana dan emosi narasumber. Pengalaman ini mengajarkan saya bahwa editing bukan sekadar memotong gambar, tapi juga menyelamatkan cerita dari keterbatasan teknis di lapangan.'
+    ],
+    [
+        'title' => 'KAMPUNG BATIK — Artistik',
+        'poster' => 'kampung-batik.jpg',
+        'link' => 'https://youtu.be/Fw-yTkQKBHQ',
+        'sinopsis' => 'Dalam produksi film dokumenter pendek "Kampung Batik", saya berperan sebagai Artistik yang bertanggung jawab memastikan setiap elemen visual dalam frame mencerminkan keaslian dan nilai budaya Batik Jetis Sidoarjo. Tantangan terbesar dalam peran ini adalah menjaga konsistensi estetika visual di lokasi nyata, rumah pengrajin, toko batik, dan gang-gang kampung — tanpa mengubah keaslian lingkungan yang justru menjadi kekuatan utama film ini. Saya harus peka terhadap detail: tata letak kain batik, pencahayaan alami ruang pengrajin, hingga properti yang tampil di setiap adegan wawancara, agar semua elemen berbicara secara visual tentang warisan budaya yang ingin kami sampaikan. Pengalaman ini mengajarkan saya bahwa artistik dalam dokumenter bukan tentang menciptakan sesuatu yang indah secara artifisial, tapi tentang menemukan dan membingkai keindahan yang sudah ada — dan membiarkan budaya itu bercerita sendiri.'
+    ],
+];
             @endphp
 
             @foreach($films as $index => $film)
@@ -329,19 +358,19 @@ $yearbookThemes = [
                 @endforeach
             </div>
         </div>
-        <!-- ==================== TAB 4: KOMERSIL ==================== -->
-        <div id="tab-commercial" class="tab-content" style="display: none;">
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <div class="md:w-2/5">
-                    <img src="{{ asset('images/posters/khong-guan.jpg') }}" alt="Khong Guan" class="film-poster w-full shadow-md">
-                </div>
-                <div class="md:w-3/5">
-                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Khong Guan</h2>
-                    <p class="text-gray-400 mb-5 leading-relaxed">Iklan komersial untuk Khong Guan: Serial Ramadhan - Rumah Ep. 4 Damai. Menutup cerita keempat karakter di Bulan Ramadhan dengan pesan kedamaian.</p>
-                    <a href="https://youtu.be/I6HaJiuaTss" target="_blank" class="btn-watch">TONTON IKLAN →</a>
-                </div>
-            </div>
+<!-- ==================== TAB 4: KOMERSIL ==================== -->
+<div id="tab-commercial" class="tab-content" style="display: none;">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="md:w-2/5">
+            <img src="{{ asset('images/posters/khong-guan.jpg') }}" alt="Khong Guan" class="film-poster w-full shadow-md">
         </div>
+        <div class="md:w-3/5">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Khong Guan — Artistik</h2>
+            <p class="text-gray-400 mb-5 leading-relaxed">Dalam produksi iklan komersial Khong Guan Serial Ramadhan "Rumah" Episode 4 Damai, saya berperan sebagai bagian dari tim Artistik yang bertanggung jawab penuh atas pembangunan dan penataan set. Tantangan terbesar sekaligus yang paling berkesan adalah mengubah sebuah garasi kosong menjadi dua set yang berbeda karakter — sebuah bengkel dan sebuah warung lengkap dengan jajanan di dalamnya. Proses ini bukan sekadar mendekorasi, melainkan membangun dunia visual dari nol. Kami juga harus memastikan setiap produk dan jajanan yang terpampang di set warung sesuai dengan ketentuan sponsor yang mendanai produksi, sehingga kami melakukan proses seleksi dan penggantian properti secara teliti. Seluruh proses persiapan set ini memakan waktu satu minggu penuh — sebuah pengalaman yang mengajarkan saya tentang presisi, koordinasi tim, dan bagaimana sebuah ruang biasa bisa bertransformasi menjadi cerita visual yang kuat di depan kamera.</p>
+            <a href="https://youtu.be/I6HaJiuaTss" target="_blank" class="btn-watch">TONTON IKLAN →</a>
+        </div>
+    </div>
+</div>
 
         <!-- ==================== TAB 5: PENCAPAIAN & SERTIFIKAT ==================== -->
         <div id="tab-achievement" class="tab-content" style="display: none;">

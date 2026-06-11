@@ -14,15 +14,15 @@
         <div class="space-y-4">
             <div class="flex items-center gap-4 p-3 rounded-lg bg-white/5">
                 <span class="text-[#d97a3e] font-semibold w-24">Email</span>
-                <span class="text-gray-300">erykodwicahyo@gmail.com</span>
+                <span class="text-gray-300">erykodwicahyo11@gmail.com</span>
             </div>
             <div class="flex items-center gap-4 p-3 rounded-lg bg-white/5">
                 <span class="text-[#d97a3e] font-semibold w-24">Instagram</span>
-                <span class="text-gray-300">@erykodwicahyo</span>
+                <span class="text-gray-300">@erykodwi</span>
             </div>
             <div class="flex items-center gap-4 p-3 rounded-lg bg-white/5">
-                <span class="text-[#d97a3e] font-semibold w-24">YouTube</span>
-                <span class="text-gray-300">/ErykodwiCahyo</span>
+                <span class="text-[#d97a3e] font-semibold w-24">kontak</span>
+                <span class="text-gray-300">62+ 831 7225 1379</span>
             </div>
         </div>
         
